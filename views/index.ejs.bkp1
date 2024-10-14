@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <% include partials/head %>
+  <style>
+    /* Add your existing styles or any additional styles you need here */
+    body {
+      background-color: #f8f9fa; /* Adjust this color if needed */
+    }
+
+    .header {
+      background-color: #d3d3d3; /* Light grey color */
+      padding: 2px 20px; /* Reduced padding for a smaller header */
+      display: flex; /* Use flexbox for layout */
+      justify-content: space-between; /* Space between logo and links */
+      align-items: center; /* Center items vertically */
+    }
+
+    .header img {
+      border-radius: 50%; /* Fully round logo */
+      width: 75px; /* Adjusted width for better roundness */
+      height: 75px; /* Adjusted height to match width */
+      object-fit: cover; /* Prevents distortion and ensures coverage */
+    }
+
+    .header a {
+      color: #333; /* Set this to your desired font color */
+      font-family: Arial, sans-serif; /* Adjust the font family if needed */
+      text-decoration: none; /* Remove underline */
+      margin: 0 15px; /* Add margin between links */
+      text-transform: uppercase; /* Make text uppercase */
+      font-weight: normal; /* Remove bold */
+      font-size: 16px; /* Reverted font size for links */
+      padding: 5px 10px; /* Reverted padding to make buttons smaller */
+    }
+
+    .header a:hover {
+      text-decoration: underline; /* Optional: underline on hover */
+    }
+
+    .fav-img {
+      width: 100%; /* Make images responsive */
+      height: 250px; /* Increased height for uniform images */
+      object-fit: cover; /* Cover the area without stretching */
+    }
+
+    .container-fluid {
+      padding: 20px; /* Add padding to the container */
+    }
+
+    .fav-img-caption {
+      font-size: 18px; /* Increased font size for category names */
+      margin-top: 10px; /* Space between image and text */
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <img src="https://nodejs-app-images-bucket.s3.ap-south-1.amazonaws.com/images/logo.jpg" alt="Logo"> <!-- Logo -->
+    <div>
+      <a href="/">HOME</a> <!-- Home link -->
+      <a href="/signout">SIGN OUT</a> <!-- Sign Out link -->
+    </div>
+  </div>
+
+  <div class="container-fluid bg-3 text-center">
+    <h3>Home</h3><br>
+    <div class="row">
+      <!-- Favourite Game -->
+      <div class="col-sm-4">
+        <img src="https://nodejs-app-images-bucket.s3.ap-south-1.amazonaws.com/images/pubg.jpg" class="img-responsive fav-img" alt="Favourite Game">
+        <p class="fav-img-caption">Favourite Game</p>
+      </div>
+
+      <!-- Favourite Esports Player -->
+      <div class="col-sm-4">
+        <img src="https://nodejs-app-images-bucket.s3.ap-south-1.amazonaws.com/images/Shroud.jpg" class="img-responsive fav-img" alt="Favourite Esports Player">
+        <p class="fav-img-caption">Favourite Esports Player</p>
+      </div>
+
+      <!-- Favourite Sport -->
+      <div class="col-sm-4">
+        <img src="https://nodejs-app-images-bucket.s3.ap-south-1.amazonaws.com/images/football.jpg" class="img-responsive fav-img" alt="Favourite Sport">
+        <p class="fav-img-caption">Favourite Sport</p>
+      </div>
+    </div>
+
+    <br>
+
+    <div class="row">
+      <!-- Favourite Actor -->
+      <div class="col-sm-4">
+        <img src="https://nodejs-app-images-bucket.s3.ap-south-1.amazonaws.com/images/actor.jpg" class="img-responsive fav-img" alt="Favourite Actor">
+        <p class="fav-img-caption">Favourite Actor</p>
+      </div>
+
+      <!-- Favourite Singer -->
+      <div class="col-sm-4">
+        <img src="https://nodejs-app-images-bucket.s3.ap-south-1.amazonaws.com/images/singer.jpg" class="img-responsive fav-img" alt="Favourite Singer">
+        <p class="fav-img-caption">Favourite Singer</p>
+      </div>
+
+      <!-- Favourite Food -->
+      <div class="col-sm-4">
+        <img src="https://nodejs-app-images-bucket.s3.ap-south-1.amazonaws.com/images/food.jpg" class="img-responsive fav-img" alt="Favourite Food">
+        <p class="fav-img-caption">Favourite Food</p>
+      </div>
+    </div>
+  </div>
+
+  <% include partials/script %>
+</body>
+</html>
+

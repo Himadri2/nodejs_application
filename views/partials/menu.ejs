@@ -4,7 +4,7 @@
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
+        <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="#">LOGO</a>
     </div>
@@ -13,7 +13,15 @@
         <li id="home"><a href="/">HOME</a></li>
         <li id="about"><a href="/about">ABOUT US</a></li>
         <li id="contact"><a href="/contact">CONTACT US</a></li>
+
+        <!-- Display the Signout button only if the user is authenticated -->
+        <% if (session.isAuthenticated) { %>
+          <li><a href="/logout">SIGN OUT</a></li>
+        <% } else { %>
+          <li><a href="https://<%= process.env.COGNITO_DOMAIN %>/login?client_id=<%= process.env.COGNITO_APP_CLIENT_ID %>&response_type=code&redirect_uri=https://app.hitch.zone/callback">SIGN IN</a></li>
+        <% } %>
       </ul>
     </div>
   </div>
 </nav>
+
